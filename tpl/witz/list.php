@@ -23,10 +23,10 @@ $hrefComments = href('Mettwitze', 'ListComments', '&id='.$gdo->getID());
    class="mb-1"
    style="opacity: 0.0;"><?=$gdo->displayAnswer()?></p>
   <small class="text-muted">
-    <a href="<?=$hrefCommentWrite?>"><?=t('btn_write_comment')?></a>
+    <a href="<?=$hrefCommentWrite?>" rel="nofollow"><?=t('btn_write_comment')?></a>
     (<a href="<?=$hrefComments?>"><?=t('link_comments', [$gdo->getCommentCount()])?></a>)
 <?php if ($gdo->canEdit($user)) : ?>
-<?= GDT_EditButton::make()->gdo($gdo)->addClass('ri')->renderCell(); ?>
+<?= GDT_EditButton::make()->noFollow()->gdo($gdo)->addClass('ri')->renderCell(); ?>
 <?php endif; ?>
   </small>
   <span class="cb"></span>
