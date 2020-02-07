@@ -26,37 +26,27 @@ final class CRUD extends MethodCrud
 		return $gdo->getCreator() === $user;
 	}
 	
-	public function onCreate(GDT_Form $form)
+	public function afterCreate(GDT_Form $form, GDO $gdo)
 	{
-		$response = parent::onCreate($form);
-		$this->sendMails($form);
-		return $response;
+		$this->sendMails($form, $gdo);
 	}
 	
-	/**
-	 * @return GDO_Mettwitz
-	 */
-	private function getWitz()
-	{
-		return $this->gdo;
-	}
-
-	private function sendMails(GDT_Form $form)
+	private function sendMails(GDT_Form $form, GDO_Mettwitz $gdo)
 	{
 		foreach (GDO_User::admins() as $user)
 		{
-			$this->sendMail($user, $form);
+			$this->sendMail($user, $form, $gdo);
 		}
 	}
 
-	private function sendMail(GDO_User $user, GDT_Form $form)
+	private function sendMail(GDO_User $user, GDT_Form $form, GDO_Mettwitz $gdo)
 	{
 		$mail = Mail::botMail();
 		$mail->setSubject(tusr($user, 'mail_subj_new_mettwitz'));
 		$tVars = array(
 			$user->displayNameLabel(),
-			$this->getWitz()->displayQuestion(),
-			$this->getWitz()->displayAnswer(),
+			$gdo->displayQuestion(),
+			$gdo->displayAnswer(),
 			sitename(),
 		);
 		$mail->setBody(tusr($user, 'mail_body_new_mettwitz', $tVars));
