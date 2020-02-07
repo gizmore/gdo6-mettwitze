@@ -1,13 +1,15 @@
-<h1>Imprint</h1>
+<h1 class="ce">Imprint</h1>
 <hr/>
-<pre>
-Responsible for the website is:
-
-Christian aka. gizmore,
+<div>
+Responsible for the website is:<br/>
+<br/>
+Christian<br/>
+a.k.a.<br/>
+gizmore@wechall.net,<br/>
 Germany
-</pre>
+</div>
 <hr/>
-<pre>
-I am not responsible for any content added by other users.
+<div>
+I am not responsible for any content added by other users.<br/>
 If you think some content is inappropiate please contact me at <a href="mailto:gizmore@gizmore.org" subject="Schlechter Mettwitz">gizmore@gizmore.org</a>.
-</pre>
+</div>
