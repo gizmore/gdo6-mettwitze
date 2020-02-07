@@ -15,7 +15,7 @@ $hrefComments = href('Mettwitze', 'ListComments', '&id='.$gdo->getID());
  class="list-group-item list-group-item-action flex-column align-items-start">
   <div class="d-flex w-100 justify-content-between">
     <?=GDT_VotePopup::make()->gdo($gdo)->renderCell()?>
-    <small class="text-muted ri"><?=t('witz_meta', [$gdo->displayAge(), $user->displayNameLabel()])?></small>
+    <small class="text-muted ri"><?=t('witz_meta', [$gdo->displayAge(), $gdo->getCreator()->displayNameLabel()])?></small>
   </div>
   <span class="cb"></span>
   <h5 class="mb-1"><?=$gdo->displayQuestion()?></h5>
