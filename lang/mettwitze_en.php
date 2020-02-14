@@ -1,9 +1,12 @@
 <?php
 return array(
 'lbl_mettwitze' => 'Mettwitze',
-'link_witze' => 'Jokes',
-'link_add_witz' => 'Add Joke',
-
+'link_witze_new' => 'Latest Mettwitze',
+'link_witze_all' => 'All Mettwitze',
+'link_witze_best' => 'The best Mettwitze',
+'link_witze_rand' => 'Random Mettwitz',
+'link_add_witz' => 'New Mettwitz',
+	
 'paragraph_mettwitze' => 'A collection of Mettwitze. German only. Click on a question to reveal the answer. The sidebar allows to add new jokes.',
 'list_listwitze' => '%s Jokes',
 'witz_meta' => '%s by %s',
@@ -28,5 +31,8 @@ Answer: %s
 Kind Regards
 The %s Team
 ',
+	
+'list_random' => '%s random Mettwitz(e)',
+'link_more_random_mett' => 'More Mettwitze',
 	
 );
