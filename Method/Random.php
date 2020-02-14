@@ -33,7 +33,7 @@ final class Random extends MethodQueryList
 	public function execute()
 	{
 		$more = GDT_Response::makeWith(
-			GDT_Link::make('link_more_random_mett')->noFollow()->href(href('Mettwitze', 'Random')),
+			GDT_Link::make('link_more_random_mett')->noFollow()->href(href('Mettwitze', 'Random'))
 		);
 		return parent::execute()->add($more);
 	}
