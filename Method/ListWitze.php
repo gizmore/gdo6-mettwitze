@@ -12,6 +12,11 @@ use GDO\Util\Common;
 
 final class ListWitze extends MethodQueryList
 {
+	public function gdoFilters()
+	{
+		return $this->gdoTable()->gdoColumnsExcept();
+	}
+	
 	public function gdoTable()
 	{
 		return GDO_Mettwitz::table();
@@ -19,7 +24,7 @@ final class ListWitze extends MethodQueryList
 	
 	public function gdoQuery()
 	{
-		$query = parent::gdoQuery()->orderDESC('mw_created');
+ 		$query = parent::gdoQuery(); #->orderDESC('mw_created');
 		
 		if ($search = Common::getFormString('search'))
 		{
