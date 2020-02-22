@@ -25,6 +25,10 @@ final class ListWitze extends MethodQueryList
 	public function gdoQuery()
 	{
  		$query = parent::gdoQuery(); #->orderDESC('mw_created');
+ 		if (!isset($_REQUEST['o']))
+ 		{
+ 			$query->orderDESC('mw_created');
+ 		}
 		
 		if ($search = Common::getFormString('search'))
 		{
