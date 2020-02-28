@@ -7,6 +7,8 @@ use GDO\Core\GDT_Response;
 use GDO\UI\GDT_Link;
 use GDO\Table\GDT_PageMenu;
 use GDO\Table\GDT_List;
+use GDO\UI\GDT_Bar;
+use GDO\UI\GDT_Button;
 
 final class Random extends MethodQueryList
 {
@@ -33,7 +35,9 @@ final class Random extends MethodQueryList
 	public function execute()
 	{
 		$more = GDT_Response::makeWith(
-			GDT_Link::make('link_more_random_mett')->noFollow()->href(href('Mettwitze', 'Random'))
+			GDT_Bar::make()->horizontal()->addField(
+				GDT_Button::make('link_more_random_mett')->noFollow()->href(href('Mettwitze', 'Random'))
+			)
 		);
 		return parent::execute()->add($more);
 	}

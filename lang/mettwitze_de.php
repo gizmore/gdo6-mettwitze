@@ -1,5 +1,8 @@
 <?php
 return array(
+'mdescr_mettwitze_listwitze' => 'Die neusten Mettwitze',
+'mdescr_mettwitze_random' => 'Ein zufälliger Mettwitz',
+	
 'lbl_mettwitze' => 'Mettwitze',
 'link_witze_new' => 'Neueste Mettwitze',
 'link_witze_all' => 'Alle Mettwitze',
