@@ -8,9 +8,10 @@ return array(
 'link_witze_all' => 'Alle Mettwitze',
 'link_witze_best' => 'Die besten Mettwitze',
 'link_witze_rand' => 'Zufälliger Mettwitz',
-'link_add_witz' => 'Neuer Mettwitz',
+'link_add_witz' => 'Mettwitz hinzufügen',
 
 'paragraph_mettwitze' => 'Eine Sammlung von Mettwitzen. Nur in Deutsch! Klicke einen Eintrag an um die Antwort zu sehen.',
+'paragraph_mettwitze_best' => 'Die besten Mettwitze, sortiert nach Bewertungen.',
 'list_listwitze' => '%s Mettwitze',
 'witz_meta' => '%s von %s',
 'witz_comments' => '%s <a href="%s">Kommentare</a>',

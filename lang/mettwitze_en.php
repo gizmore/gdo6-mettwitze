@@ -12,6 +12,7 @@ return array(
 'link_add_witz' => 'New Mettwitz',
 	
 'paragraph_mettwitze' => 'A collection of Mettwitze. German only. Click on a question to reveal the answer. The sidebar allows to add new jokes.',
+'paragraph_mettwitze_best' => 'The best Mettwitze, ordered by ratings.',
 'list_listwitze' => '%s Jokes',
 'witz_meta' => '%s by %s',
 'witz_comments' => '%s <a href="%s">Comments</a>',

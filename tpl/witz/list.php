@@ -13,12 +13,12 @@ $hrefComments = href('Mettwitze', 'ListComments', '&id='.$gdo->getID());
  style="cursor: pointer;"
  onclick="GDO.Mettwitze.revealJoke('<?=$gdo->getID()?>')"
  class="list-group-item list-group-item-action flex-column align-items-start">
-  <div class="d-flex w-100 justify-content-between">
+  <div class=" w-100 justify-content-between">
+    <small class="text-muted fr"><?=t('witz_meta', [$gdo->displayAge(), $gdo->getCreator()->displayNameLabel()])?></small>
     <?=GDT_VotePopup::make()->gdo($gdo)->renderCell()?>
-    <small class="text-muted ri"><?=t('witz_meta', [$gdo->displayAge(), $gdo->getCreator()->displayNameLabel()])?></small>
   </div>
   <span class="cb"></span>
-  <h5 class="mb-1"><?=$gdo->displayQuestion()?></h5>
+  <h5 class="mb-1 bw"><?=$gdo->displayQuestion()?></h5>
   <p id="joke_<?=$gdo->getID()?>"
    class="mb-1"
    style="opacity: 0.0;"><?=$gdo->displayAnswer()?></p>
