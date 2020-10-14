@@ -22,6 +22,11 @@ final class ListWitze extends MethodQueryList
 		return GDO_Mettwitz::table();
 	}
 	
+	public function isQuicksorted()
+	{
+	    return false;
+	}
+	
 	public function gdoQuery()
 	{
  		$query = parent::gdoQuery(); #->orderDESC('mw_created');
@@ -32,7 +37,7 @@ final class ListWitze extends MethodQueryList
 		
 		if ($search = Common::getFormString('search'))
 		{
-			$search = GDO::escapeS($search);
+			$search = GDO::escapeSearchS($search);
 			$query->where("mw_question LIKE '%$search%' OR mw_answer LIKE '%$search%'");
 		}
 		
