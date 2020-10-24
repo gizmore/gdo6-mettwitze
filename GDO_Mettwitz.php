@@ -23,7 +23,8 @@ final class GDO_Mettwitz extends GDO
 	public function gdoCommentTable() { return GDO_MettwitzComments::table(); }
 	public function gdoCommentsEnabled() { return Module_Mettwitze::instance()->cfgComments(); }
 	public function gdoCanComment(GDO_User $user) { return $user->isMember() || Module_Mettwitze::instance()->cfgGuestComments(); }
-
+	public function gdoCommentHrefEdit() { return href('Mettwitze', 'EditComment'); }
+	
 	#############
 	### Votes ###
 	#############

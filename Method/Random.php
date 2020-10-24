@@ -4,7 +4,6 @@ namespace GDO\Mettwitze\Method;
 use GDO\Table\MethodQueryList;
 use GDO\Mettwitze\GDO_Mettwitz;
 use GDO\Core\GDT_Response;
-use GDO\UI\GDT_Link;
 use GDO\Table\GDT_PageMenu;
 use GDO\Table\GDT_List;
 use GDO\UI\GDT_Bar;
@@ -29,7 +28,7 @@ final class Random extends MethodQueryList
 	
 	public function gdoQuery()
 	{
-		return $this->gdoTable()->select()->first()->orderASC("rand()");
+		return $this->gdoTable()->select()->first()->debug()->orderASC("rand()");
 	}
 	
 	public function execute()
