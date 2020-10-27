@@ -4,17 +4,17 @@ use GDO\UI\GDT_Card;
 use GDO\UI\GDT_Headline;
 use GDO\UI\GDT_Paragraph;
 use GDO\UI\GDT_Divider;
+use GDO\UI\GDT_Label;
 /** @var $gdo GDO_Mettwitz **/
-$gdo instanceof GDO_Mettwitz;
-
 $card = GDT_Card::make()->gdo($gdo);
-$card->withCreated()->withCreator();
+$card->titleCreation();
 $card->addFields(array(
+    GDT_Label::make('mw_question'),
 	GDT_Headline::make()->withHTML($gdo->displayQuestion()),
-	GDT_Paragraph::make()->withHTML($gdo->displayAnswer()),
+    GDT_Label::make('mw_answer'),
+    GDT_Paragraph::make()->withHTML($gdo->displayAnswer()),
 	GDT_Divider::make(),
 	$gdo->getVoteCountColumn(),
 	$gdo->getVoteRatingColumn(),
 ));
-
 echo $card->render();
