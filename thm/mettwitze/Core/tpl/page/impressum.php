@@ -11,5 +11,5 @@ Germany
 <hr/>
 <div>
 I am not responsible for any content added by other users.<br/>
-If you think some content is inappropiate please contact me at <a href="mailto:gizmore@gizmore.org" subject="Schlechter Mettwitz">gizmore@gizmore.org</a>.
+If you think some content is inappropiate please contact me at <a href="mailto:gizmore@gizmore.org?subject=Schlechter%20Mettwitz">gizmore@gizmore.org</a>.
 </div>

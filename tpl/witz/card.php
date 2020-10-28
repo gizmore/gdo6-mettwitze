@@ -7,7 +7,7 @@ use GDO\UI\GDT_Divider;
 use GDO\UI\GDT_Label;
 /** @var $gdo GDO_Mettwitz **/
 $card = GDT_Card::make()->gdo($gdo);
-$card->titleCreation();
+$card->creatorHeader();
 $card->addFields(array(
     GDT_Label::make('mw_question'),
 	GDT_Headline::make()->withHTML($gdo->displayQuestion()),
