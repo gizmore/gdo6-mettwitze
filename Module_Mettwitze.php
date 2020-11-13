@@ -21,7 +21,7 @@ final class Module_Mettwitze extends GDO_Module
 	##############
 	public $module_priority = 90; # init very late. 50 is default. 10 for core stuff like jquery or db / core / log.
 	
-	public function getThemes() { return ['mettwitze']; } # own theme for tpl overrides @see thm folder.
+	public function getTheme() { return 'mettwitze'; } # own theme for tpl overrides @see thm folder.
 	public function onLoadLanguage() { return $this->loadLanguage('lang/mettwitze'); }
 	public function getDependencies() { return ['BootstrapTheme', 'Comment', 'Vote', 'Login', 'Register', 'Admin', 'Recovery', 'Account', 'Profile', 'Sitemap']; }
 	public function getClasses()
