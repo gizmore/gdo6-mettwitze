@@ -5,6 +5,7 @@ use GDO\Core\GDO_Module;
 use GDO\DB\GDT_Checkbox;
 use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Link;
+use GDO\UI\GDT_Page;
 
 /**
  * A website for Mettwitze. (gdo6 demo site :)
@@ -27,11 +28,11 @@ final class Module_Mettwitze extends GDO_Module
 	public function getClasses()
 	{
 		# Entity tables
-		return array(
-			"GDO\\Mettwitze\\GDO_Mettwitz",
-			"GDO\\Mettwitze\\GDO_MettwitzVote",
-			"GDO\\Mettwitze\\GDO_MettwitzComments",
-		);
+		return [
+		    GDO_Mettwitz::class,
+		    GDO_MettwitzVote::class,
+		    GDO_MettwitzComments::class,
+		];
 	}
 	
 	##############
@@ -54,14 +55,12 @@ final class Module_Mettwitze extends GDO_Module
 	#############
 	### Hooks ###
 	#############
-	public function hookTopBar(GDT_Bar $bar)
+	public function onInitSidebar()
 	{
+	    $bar = GDT_Page::$INSTANCE->topNav;
 		$bar->addField(GDT_Link::make('lbl_mettwitze')->href(href('Mettwitze', 'ListWitze')));
-	}
-	
-	public function hookLeftBar(GDT_Bar $bar)
-	{
-// 		$bar->addField(GDT_Link::make('link_witze')->href(href('Mettwitze', 'ListWitze')));
+
+		$bar = GDT_Page::$INSTANCE->leftNav;
 		$bar->addField(GDT_Link::make('link_witze_all')->href(href('Mettwitze', 'ListWitze', '&o[mw_created]=1')));
 		$bar->addField(GDT_Link::make('link_witze_new')->href(href('Mettwitze', 'ListWitze', '&o[mw_created]=0')));
 		$bar->addField(GDT_Link::make('link_witze_best')->href(href('Mettwitze', 'ListWitze', '&o[mw_rating]=0&o[mw_votes]=0')));
