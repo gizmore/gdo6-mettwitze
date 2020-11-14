@@ -26,7 +26,7 @@ final class Random extends MethodQueryList
 		);
 	}
 	
-	public function gdoQuery()
+	public function getQuery()
 	{
 		return $this->gdoTable()->select()->first()->debug()->orderASC("rand()");
 	}

@@ -10,9 +10,9 @@ $card = GDT_Card::make()->gdo($gdo);
 $card->creatorHeader();
 $card->addFields(array(
     GDT_Label::make('mw_question'),
-	GDT_Headline::make()->withHTML($gdo->displayQuestion()),
+	GDT_Headline::make()->textRaw($gdo->displayQuestion()),
     GDT_Label::make('mw_answer'),
-    GDT_Paragraph::make()->withHTML($gdo->displayAnswer()),
+    GDT_Paragraph::make()->textRaw($gdo->displayAnswer()),
 	GDT_Divider::make(),
 	$gdo->getVoteCountColumn(),
 	$gdo->getVoteRatingColumn(),
