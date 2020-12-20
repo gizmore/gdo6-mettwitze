@@ -5,16 +5,16 @@ use GDO\Table\MethodQueryList;
 use GDO\Mettwitze\GDO_Mettwitz;
 use GDO\Core\GDT_Response;
 use GDO\Table\GDT_PageMenu;
-use GDO\Table\GDT_List;
 use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Button;
+use GDO\Table\GDT_Table;
 
 final class Random extends MethodQueryList
 {
 	public function gdoTable() { return GDO_Mettwitz::table(); }
 	public function isPaginated() { return false; }
 	
-	protected function setupTitle(GDT_List $list)
+	protected function setupTitle(GDT_Table $list)
 	{
 		$list->title(t('list_random', [$this->gdoParameter('ipp')->ipp]));
 	}
@@ -28,7 +28,7 @@ final class Random extends MethodQueryList
 	
 	public function getQuery()
 	{
-		return $this->gdoTable()->select()->first()->debug()->orderASC("rand()");
+		return $this->gdoTable()->select()->first()->orderASC("rand()");
 	}
 	
 	public function execute()
