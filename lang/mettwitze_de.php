@@ -38,4 +38,7 @@ Das %s Team
 	
 'list_random' => '%s zufällige(r) Mettwitz(e)',
 'link_more_random_mett' => 'Mehr Mettwitze',
+
+'list_mettwitze_listwitze' => '%s Mettwitz(e)',
+'list_mettwitze_listcomments' => '%s Kommentar(e)',
 );

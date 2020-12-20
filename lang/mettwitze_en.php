@@ -39,5 +39,7 @@ The %s Team
 	
 'list_random' => '%s random Mettwitz(e)',
 'link_more_random_mett' => 'More Mettwitze',
-	
+
+'list_mettwitze_listwitze' => '%s Mettwitz(e)',
+'list_mettwitze_listcomments' => '%s comment(s)',
 );

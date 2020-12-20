@@ -14,6 +14,10 @@ final class Random extends MethodQueryList
 	public function gdoTable() { return GDO_Mettwitz::table(); }
 	public function isPaginated() { return false; }
 	
+	public function isSearched() { return false; }
+	public function isFiltered() { return false; }
+	public function isOrdered() { return false; }
+	
 	protected function setupTitle(GDT_Table $list)
 	{
 		$list->title(t('list_random', [$this->gdoParameter('ipp')->ipp]));

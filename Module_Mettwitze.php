@@ -61,9 +61,9 @@ final class Module_Mettwitze extends GDO_Module
 		$bar->addField(GDT_Link::make('lbl_mettwitze')->href(href('Mettwitze', 'ListWitze')));
 
 		$bar = GDT_Page::$INSTANCE->leftNav;
-		$bar->addField(GDT_Link::make('link_witze_all')->href(href('Mettwitze', 'ListWitze', '&o[mw_created]=1')));
-		$bar->addField(GDT_Link::make('link_witze_new')->href(href('Mettwitze', 'ListWitze', '&o[mw_created]=0')));
-		$bar->addField(GDT_Link::make('link_witze_best')->href(href('Mettwitze', 'ListWitze', '&o[mw_rating]=0&o[mw_votes]=0')));
+		$bar->addField(GDT_Link::make('link_witze_all')->href(href('Mettwitze', 'ListWitze', '&o1[o][mw_created]=1')));
+		$bar->addField(GDT_Link::make('link_witze_new')->href(href('Mettwitze', 'ListWitze', '&o1[o][mw_created]=0')));
+		$bar->addField(GDT_Link::make('link_witze_best')->href(href('Mettwitze', 'ListWitze', '&o1[o][mw_rating]=0&o1[mw_votes]=0')));
 		$bar->addField(GDT_Link::make('link_witze_rand')->href(href('Mettwitze', 'Random')));
 		$bar->addField(GDT_Link::make('link_add_witz')->href(href('Mettwitze', 'CRUD')));
 	}
