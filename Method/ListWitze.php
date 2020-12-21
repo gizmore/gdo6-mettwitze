@@ -25,6 +25,9 @@ final class ListWitze extends MethodQueryList
 	        'mw_question', 'mw_answer', 'mw_votes', 'mw_rating', 'mw_creator', 'mw_created']);
 	}
 	
+	public function getDefaultOrder() { return 'mw_created'; }
+	public function getDefaultOrderDir() { return false; }
+	
 	public function execute()
 	{
 		if ((@$_REQUEST['f']['list_page']) <= 1)
