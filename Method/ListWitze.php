@@ -30,7 +30,7 @@ final class ListWitze extends MethodQueryList
 	
 	public function execute()
 	{
-		if ((@$_REQUEST['f']['list_page']) <= 1)
+		if ((@$_REQUEST['o1']['page']) <= 1)
 		{
 			$paragraph = GDT_Paragraph::make()->text('paragraph_mettwitze');
 			return GDT_Response::makeWith($paragraph)->add(parent::execute());
