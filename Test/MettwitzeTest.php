@@ -10,9 +10,15 @@ use GDO\Mettwitze\Method\ListWitze;
 use GDO\Table\Module_Table;
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertStringContainsString;
+use function PHPUnit\Framework\assertNotContains;
+use function PHPUnit\Framework\assertContains;
+use function PHPUnit\Framework\assertTrue;
 
 /**
- * The test data is in Module_Tests.
+ * Also tests:
+ * 
+ * - Pagemenu
+ * - BigSearch
  * 
  * @author gizmore
  * @version 6.10
@@ -85,6 +91,21 @@ final class MettwitzeTest extends TestCase
         $html = $r->render();
         assertStringContainsString('3 Mett', $html);
         assertStringContainsString('Frage 3', $html);
+    }
+ 
+    public function testBigSearch()
+    {
+        $m = ListWitze::make();
+        $o1 = $m->table->headers->name;
+        $gp = [
+            $o1 => [
+                'search' => 'Frage 3',
+            ], 
+        ];
+        $r = MethodTest::make()->method($m)->getParameters($gp)->execute();
+        $html = $r->render();
+        assertTrue(strpos($html, "Frage 1") === false, "Search does not find question 1.");
+        assertTrue(strpos($html, "Frage 3") !== false, "Search does find question 3.");
     }
     
 }
