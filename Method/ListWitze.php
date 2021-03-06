@@ -8,9 +8,11 @@ use GDO\UI\GDT_Paragraph;
 
 /**
  * List of Mettwitze.
+ * Write some info paragraph on page 1.
+ * 
  * @author gizmore
- * @version 6.10
- * @since 6.09
+ * @version 6.10.1
+ * @since 6.9.0
  */
 final class ListWitze extends MethodQueryList
 {

@@ -21,18 +21,11 @@ use function PHPUnit\Framework\assertTrue;
  * - BigSearch
  * 
  * @author gizmore
- * @version 6.10
+ * @version 6.10.1
+ * @since 6.9.2
  */
 final class MettwitzeTest extends TestCase
 {
-//     public function testLoadMettwitze()
-//     {
-//         $mod = Module_Tests::instance();
-//         Database::instance()->parseSQLFile($mod->filePath('Test/data/mettwitze.sql'));
-//         $count = GDO_Mettwitz::table()->countWhere();
-//         assertGreaterThanOrEqual(300, $count);
-//     }
-
     public function testCreation()
     {
         $m = CRUD::make();
@@ -58,7 +51,7 @@ final class MettwitzeTest extends TestCase
         $this->assert200("Test if Mettwitz 3 can be created.");
         
         $count = GDO_Mettwitz::table()->countWhere();
-        assertGreaterThanOrEqual(3, $count, 'Test if 3 Mettwitze can be created.');
+        assertEquals(3, $count, 'Test if 3 Mettwitze can be created.');
     }
     
     public function testPagemenu()
@@ -77,8 +70,9 @@ final class MettwitzeTest extends TestCase
         $p = [];
         $r = MethodTest::make()->method($m)->parameters($p)->getParameters($gp)->execute();
         $html = $r->render();
-        assertStringContainsString('3 Mett', $html);
+        assertStringContainsString('Mettwitz 2', $html);
         assertStringContainsString('Frage 2', $html);
+        assertStringContainsString(' rel="next"', $html);
 
         $m = ListWitze::make();
         $o1 = $m->table->headers->name;
@@ -89,8 +83,9 @@ final class MettwitzeTest extends TestCase
         ];
         $r = MethodTest::make()->method($m)->parameters($p)->getParameters($gp)->execute();
         $html = $r->render();
-        assertStringContainsString('3 Mett', $html);
+        assertStringContainsString('Mettwitz 3', $html);
         assertStringContainsString('Frage 3', $html);
+        assertStringContainsString(' rel="prev"', $html);
     }
  
     public function testBigSearch()
@@ -105,6 +100,7 @@ final class MettwitzeTest extends TestCase
         $r = MethodTest::make()->method($m)->getParameters($gp)->execute();
         $html = $r->render();
         assertTrue(strpos($html, "Frage 1") === false, "Search does not find question 1.");
+        assertTrue(strpos($html, "Frage 2") === false, "Search does not find question 2.");
         assertTrue(strpos($html, "Frage 3") !== false, "Search does find question 3.");
     }
     
