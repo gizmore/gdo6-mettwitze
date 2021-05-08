@@ -42,7 +42,7 @@ final class Random extends MethodQueryList
 				GDT_Button::make('link_more_random_mett')->noFollow()->href(href('Mettwitze', 'Random'))
 			)
 		);
-		return parent::execute()->add($more);
+		return parent::execute()->addField($more);
 	}
 
 }

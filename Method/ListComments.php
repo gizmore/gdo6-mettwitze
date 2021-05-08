@@ -25,7 +25,7 @@ final class ListComments extends Comments_List
 	{
 		$link = GDT_Link::make('btn_write_comment')->href($this->hrefAdd());
 		$bar = GDT_Bar::make()->horizontal()->addField($link);
-		return parent::execute()->add(GDT_Response::makeWith($bar));
+		return parent::execute()->addField(GDT_Response::makeWith($bar));
 	}
 	
 }
