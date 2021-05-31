@@ -32,7 +32,7 @@ final class Random extends MethodQueryList
 	
 	public function getQuery()
 	{
-		return $this->gdoTable()->select()->first()->orderASC("rand()");
+		return $this->gdoTable()->select()->first()->order("rand()");
 	}
 	
 	public function execute()
