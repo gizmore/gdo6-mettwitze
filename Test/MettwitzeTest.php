@@ -33,21 +33,21 @@ final class MettwitzeTest extends TestCase
             'mw_question' => 'Mettwitz 1 - Frage 1',
             'mw_answer' => 'Mettwitz 1 - Antwort 1',
         ];
-        MethodTest::make()->method($m)->parameters($p)->execute();
+        MethodTest::make()->method($m)->parameters($p)->execute('create');
         $this->assert200("Test if Mettwitz can be created.");
         
         $p = [
             'mw_question' => 'Mettwitz 2 - Frage 2',
             'mw_answer' => 'Mettwitz 2 - Antwort 2',
         ];
-        MethodTest::make()->method($m)->parameters($p)->execute();
+        MethodTest::make()->method($m)->parameters($p)->execute('create');
         $this->assert200("Test if Mettwitz 2 can be created.");
         
         $p = [
             'mw_question' => 'Mettwitz 3 - Frage 3',
             'mw_answer' => 'Mettwitz 3 - Antwort 3',
         ];
-        MethodTest::make()->method($m)->parameters($p)->execute();
+        MethodTest::make()->method($m)->parameters($p)->execute('create');
         $this->assert200("Test if Mettwitz 3 can be created.");
         
         $count = GDO_Mettwitz::table()->countWhere();
@@ -57,7 +57,8 @@ final class MettwitzeTest extends TestCase
     public function testPagemenu()
     {
         $mt = Module_Table::instance();
-        $mt->saveConfigVar('ipp', '2');
+        $mt->saveConfigVar('ipp_cli', '2');
+        $mt->saveConfigVar('ipp_http', '2');
         $ipp = $mt->cfgItemsPerPage();
         assertEquals('2', $ipp);
         
