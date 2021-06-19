@@ -1,8 +1,19 @@
 <?php
 return array(
-'mdescr_mettwitze_listwitze' => 'Die neusten Mettwitze',
-'mdescr_mettwitze_random' => 'Ein zufälliger Mettwitz',
-	
+
+    # Global
+    'keywords' => 'Mett,Mettwitze,Hackwitze,Jokes,Fun,Funny,German Meatjokes',
+    
+    # List
+    'mtitle_mettwitze_listwitze' => 'Mettwitze',
+    'mdescr_mettwitze_listwitze' => 'Eine Sammlung der neuesten und besten Mettwitze. Nur in Deutsch! Klicke einen Eintrag an um die Antwort zu sehen.',
+    
+    # Random
+    'mtitle_mettwitze_random' => 'Ein zufälliger Mettwitz',
+
+    
+    
+    
 'lbl_mettwitze' => 'Mettwitze',
 'link_witze_new' => 'Neueste Mettwitze',
 'link_witze_all' => 'Alle Mettwitze',
@@ -10,7 +21,6 @@ return array(
 'link_witze_rand' => 'Zufälliger Mettwitz',
 'link_add_witz' => 'Mettwitz hinzufügen',
 
-'paragraph_mettwitze' => 'Eine Sammlung von Mettwitzen. Nur in Deutsch! Klicke einen Eintrag an um die Antwort zu sehen.',
 'paragraph_mettwitze_best' => 'Die besten Mettwitze, sortiert nach Bewertungen.',
 'list_listwitze' => '%s Mettwitze',
 'witz_meta' => '%s von %s',

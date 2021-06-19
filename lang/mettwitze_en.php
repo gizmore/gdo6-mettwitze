@@ -1,8 +1,19 @@
 <?php
 return array(
-'mdescr_mettwitze_listwitze' => 'The latest Mettwitze',
-'mdescr_mettwitze_random' => 'A random Mettwitz',
-	
+    
+    # Global
+    'keywords' => 'Mett,Mettwitze,Hackwitze,Jokes,Fun,Funny,German Meatjokes',
+    
+    # List
+    'mtitle_mettwitze_listwitze' => 'Mettwitze',
+    'mdescr_mettwitze_listwitze' => 'A collection of Mettwitze. German only. Click on a question to reveal the answer. The sidebar allows to add new jokes.',
+    
+    # Random
+    'mtitle_mettwitze_random' => 'A random Mettwitz',
+
+    
+    
+    
 	
 'lbl_mettwitze' => 'Mettwitze',
 'link_witze_new' => 'Latest Mettwitze',
@@ -11,7 +22,6 @@ return array(
 'link_witze_rand' => 'Random Mettwitz',
 'link_add_witz' => 'New Mettwitz',
 	
-'paragraph_mettwitze' => 'A collection of Mettwitze. German only. Click on a question to reveal the answer. The sidebar allows to add new jokes.',
 'paragraph_mettwitze_best' => 'The best Mettwitze, ordered by ratings.',
 'list_listwitze' => '%s Jokes',
 'witz_meta' => '%s by %s',
