@@ -11,6 +11,8 @@ return array(
     # Random
     'mtitle_mettwitze_random' => 'A random Mettwitz',
 
+    # Comments
+    'mtitle_mettwitze_listcomments' => 'Comments',
     
     
     
