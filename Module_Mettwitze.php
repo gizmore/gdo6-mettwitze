@@ -69,6 +69,6 @@ final class Module_Mettwitze extends GDO_Module
 	
 	public function onIncludeScripts()
 	{
-		$this->addJavascript('js/mettwitze.js');
+		$this->addJS('js/mettwitze.js');
 	}
 }
