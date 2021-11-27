@@ -12,7 +12,7 @@ final class ListComments extends Comments_List
 {
 	public function hrefAdd()
 	{
-		$append = '&id=' . Common::getGetString('id');
+		$append = '&id=' . Common::getRequestString('id');
 		return href('Mettwitze', 'AddComment', $append);
 	}
 
