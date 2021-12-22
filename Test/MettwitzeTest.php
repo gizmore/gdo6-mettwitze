@@ -76,13 +76,14 @@ final class MettwitzeTest extends TestCase
         assertStringContainsString(' rel="next"', $html);
 
         $m = ListWitze::make();
-        $o1 = $m->table->headers->name;
+        $o1 = $m->getHeaderName();
         $gp = [
             $o1 => [
                 'page' => 2,
             ],
         ];
-        $r = MethodTest::make()->method($m)->parameters($p)->getParameters($gp)->execute();
+        $r = MethodTest::make()->method($m)->parameters($p)->getParameters($gp);
+        $r = $r->execute();
         $html = $r->render();
         assertStringContainsString('Mettwitz 3', $html);
         assertStringContainsString('Frage 3', $html);
@@ -92,7 +93,7 @@ final class MettwitzeTest extends TestCase
     public function testBigSearch()
     {
         $m = ListWitze::make();
-        $o1 = $m->table->headers->name;
+        $o1 = $m->getHeaderName();
         $gp = [
             $o1 => [
                 'search' => 'Frage 3',
