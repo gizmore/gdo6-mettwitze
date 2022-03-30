@@ -7,7 +7,8 @@ use GDO\UI\GDT_EditButton;
 $gdo instanceof GDO_Mettwitz;
 $id = $gdo->getID();
 $user = GDO_User::current();
-$hrefShare = href('Mettwitze', 'Witz', "&id={$id}");
+$q = seo($gdo->displayQuestion());
+$hrefShare = href('Mettwitze', 'Witz', "&id={$id}&q={$q}");
 $hrefCommentWrite = href('Mettwitze', 'AddComment', "&id={$id}");
 $hrefComments = href('Mettwitze', 'ListComments', "&id={$id}");
 ?>
