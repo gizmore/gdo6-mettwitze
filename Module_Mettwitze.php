@@ -23,7 +23,7 @@ final class Module_Mettwitze extends GDO_Module
 	
 	public function getTheme() { return 'mettwitze'; } # own theme for tpl overrides @see thm folder.
 	public function onLoadLanguage() { return $this->loadLanguage('lang/mettwitze'); }
-	public function getDependencies() { return ['BootstrapTheme', 'Comment', 'Vote', 'Login', 'Register', 'Admin', 'Recovery', 'Account', 'Profile', 'Sitemap']; }
+	public function getDependencies() { return ['BootstrapTheme', 'JQueryAutocomplete', 'Comment', 'Vote', 'Login', 'Register', 'Admin', 'Recovery', 'Account', 'Profile', 'Sitemap']; }
 	public function getClasses()
 	{
 		# Entity tables
