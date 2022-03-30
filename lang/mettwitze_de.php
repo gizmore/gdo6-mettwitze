@@ -53,4 +53,8 @@ Das %s Team
 
 'list_mettwitze_listwitze' => '%s Mettwitz(e)',
 'list_mettwitze_listcomments' => '%s Kommentar(e)',
+
+'btn_share' => 'teilen',	
+'mdescr_mettwitze_witz' => 'Ein Flachwitz auf %s; %s',
+	
 );

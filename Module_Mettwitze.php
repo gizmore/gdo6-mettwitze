@@ -10,7 +10,7 @@ use GDO\UI\GDT_Page;
  * A website for Mettwitze. (gdo6 demo site :)
  * 
  * @author gizmore
- * @version 6.10.3
+ * @version 6.11.4
  * @since 6.10.0
  * @see GDO_Mettwitz
  */

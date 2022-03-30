@@ -5,9 +5,11 @@ use GDO\Vote\GDT_VotePopup;
 use GDO\UI\GDT_EditButton;
 /** @var $gdo GDO_Mettwitz **/
 $gdo instanceof GDO_Mettwitz;
+$id = $gdo->getID();
 $user = GDO_User::current();
-$hrefCommentWrite = href('Mettwitze', 'AddComment', '&id='.$gdo->getID());
-$hrefComments = href('Mettwitze', 'ListComments', '&id='.$gdo->getID());
+$hrefShare = href('Mettwitze', 'Witz', "&id={$id}");
+$hrefCommentWrite = href('Mettwitze', 'AddComment', "&id={$id}");
+$hrefComments = href('Mettwitze', 'ListComments', "&id={$id}");
 ?>
 <div
  style="cursor: pointer;"
@@ -25,6 +27,7 @@ $hrefComments = href('Mettwitze', 'ListComments', '&id='.$gdo->getID());
   <small class="text-muted">
     <a href="<?=$hrefCommentWrite?>" rel="nofollow"><?=t('btn_write_comment')?></a>
     (<a href="<?=$hrefComments?>"><?=t('link_comments', [$gdo->getCommentCount()])?></a>)
+    <a href="<?=$hrefShare?>"><?=t('btn_share')?></a>
 <?php if ($gdo->canEdit($user)) : ?>
 <?= GDT_EditButton::make()->noFollow()->gdo($gdo)->addClass('ri')->renderCell(); ?>
 <?php endif; ?>

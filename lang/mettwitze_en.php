@@ -54,4 +54,8 @@ The %s Team
 
 'list_mettwitze_listwitze' => '%s Mettwitz(e)',
 'list_mettwitze_listcomments' => '%s comment(s)',
+	
+'btn_share' => 'share',
+'mdescr_mettwitze_witz' => 'A bad joke on %s; %s',
+	
 );
