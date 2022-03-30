@@ -61,10 +61,10 @@ final class Module_Mettwitze extends GDO_Module
 
 		$bar = GDT_Page::$INSTANCE->leftNav;
 		$bar->addField(GDT_Link::make('link_add_witz')->href(href('Mettwitze', 'CRUD')));
-		$bar->addField(GDT_Link::make('link_witze_new')->href(href('Mettwitze', 'ListWitze', '&o1[order_by]=mw_created&o1[order_dir]=DESC')));
-		$bar->addField(GDT_Link::make('link_witze_best')->href(href('Mettwitze', 'ListWitze', '&o1[order_by]=mw_rating&o1[order_dir]=DESC')));
+		$bar->addField(GDT_Link::make('link_witze_new')->href(href('Mettwitze', 'ListWitze', '&o[order_by]=mw_created&o[order_dir]=DESC')));
+		$bar->addField(GDT_Link::make('link_witze_best')->href(href('Mettwitze', 'ListWitze', '&o[order_by]=mw_rating&o[order_dir]=DESC')));
 		$bar->addField(GDT_Link::make('link_witze_rand')->href(href('Mettwitze', 'Random')));
-		$bar->addField(GDT_Link::make('link_witze_all')->href(href('Mettwitze', 'ListWitze', '&o1[order_by]=mw_created&o1[order_dir]=ASC')));
+		$bar->addField(GDT_Link::make('link_witze_all')->href(href('Mettwitze', 'ListWitze', '&o[order_by]=mw_created&o[order_dir]=ASC')));
 	}
 	
 	public function onIncludeScripts()
