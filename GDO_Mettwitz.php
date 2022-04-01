@@ -38,7 +38,7 @@ final class GDO_Mettwitz extends GDO
 	{
 		return array(
 			GDT_AutoInc::make('mw_id'),
-			GDT_String::make('mw_question')->notNull()->min(16)->max(2048),
+			GDT_String::make('mw_question')->notNull()->min(4)->max(2048),
 			GDT_String::make('mw_answer')->notNull()->min(4)->max(2048),
 			GDT_CreatedAt::make('mw_created'),
 			GDT_CreatedBy::make('mw_creator'),
